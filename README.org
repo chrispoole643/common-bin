@@ -1,0 +1,8 @@
+* Common bin
+
+A set of files I keep in my ~~/bin~ directory that have use across multiple machines.
+
+** =brew-brew=
+
+For use with [[http://brew.sh/][Mac Homebrew]]. Fetch updated packages in parallel, then install them and
+clean up.
