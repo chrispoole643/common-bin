@@ -1,0 +1,23 @@
+#!/bin/bash -
+
+dl_procs=${1-'4'}
+
+brew update
+
+answer=n
+outdated=$(brew outdated)
+
+if [[ $outdated == "" ]]; then
+    printf "\nNo outdated brews.\n"
+else
+    printf "\nOutdated brews:\n"
+    echo $outdated
+    printf "\nFetching...\n"
+    echo $outdated | xargs -n1 -P"$dl_procs" brew fetch
+    printf "Continue installing outdated brews?(n) "
+    read answer
+    printf "\n"
+    if [[ $answer == y ]]; then
+        brew upgrade && brew cleanup
+    fi
+fi
