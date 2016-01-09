@@ -1,6 +1,6 @@
 * Common bin
 
-A set of files I keep in my ~~/bin~ directory that have use across multiple machines.
+A set of files I keep in my =~/bin= directory that have use across multiple machines.
 
 ** =brew-brew=
 
